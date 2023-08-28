@@ -17,9 +17,33 @@ public class VendingMachine {
                 if (bottleOfWater.getName().equals(name) && bottleOfWater.getVolume() == volume){
                     return bottleOfWater;
                 }
+            
             }
         }
         return null;
     }
-
+    public BottleOfMilk getBottleOfMilk(String name, double volume){
+        for (Product product : products) {
+            if (product instanceof BottleOfMilk){
+                            BottleOfMilk bottleOfMilk = (BottleOfMilk)product;
+                            if (bottleOfMilk.getName().equals(name) && bottleOfMilk.getVolume() == volume){
+                                return bottleOfMilk;
+                            }
+                        }
+        }
+        return null;
+    }
+       
+    
+    public Cookies getCookies(String name, String taste){
+        for (Product product : products) {
+            if (product instanceof Cookies){
+                            Cookies cookies = (Cookies)product;
+                            if (cookies.getName().equals(name) && cookies.getTaste() == taste){
+                                return cookies;
+                            }
+                        }
+        }
+        return null;
+    }
 }
